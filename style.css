@@ -1,0 +1,49 @@
+*{
+    margin: 0%;
+}
+
+nav{
+    background-color: crimson;
+}
+
+#seccionUno{
+    background-color: blue;
+}
+
+#seccionDos{
+    background-color: black;
+}
+
+#seccionTres{
+    background-color: black;
+}
+
+#seccionCuatro{
+    background-color: black;
+}
+
+#tendenciasContainer{
+    align-self: auto;
+}
+
+h1{
+    color: floralwhite;
+}
+
+h2{
+    color: floralwhite;
+}
+
+h3{
+    color: floralwhite;
+}
+
+footer{
+    background-color: crimson;
+}
+
+span{
+    color: floralwhite;
+    font-weight: bold;
+    font-size: large;
+}
