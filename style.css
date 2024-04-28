@@ -5,18 +5,39 @@
 }
 
 nav{
-    background-color: crimson;
+    background-color: brown;
+
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    list-style-type: none;
+    overflow: hidden;
+    /*display: inline-flex; /* Para hacer que el elemento tan solo ocupe lo que sus hijos marque */
+    border-radius: 3px;
+    align-items: center; /* Para alinear items flexibles respecto al eje secundario */
+    justify-content: space-between;
 }
 
+footer{
+    background-color: brown;
+
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    list-style-type: none;
+    overflow: hidden;
+    /*display: inline-flex; /* Para hacer que el elemento tan solo ocupe lo que sus hijos marque */
+    border-radius: 3px;
+    align-items: center; /* Para alinear items flexibles respecto al eje secundario */
+    justify-content: space-between;
+}
 
 #seccionUno{
     background-image: url('banner_bg.jpg');
     background-size: cover;
-    height: 1000px;
+    height: 960px;
+    text-align: center;
 }
 
 #seccionDos{
     background-color: black;
+    text-align: center;
 }
 
 #seccionTres{
@@ -43,14 +64,57 @@ h3{
     color: floralwhite;
 }
 
-footer{
-    background-color: crimson;
+.contenedor-botones-footer{
+    display: inline;
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 8px;
+    border-color: brown;
+    background-color: brown;
+    text-decoration: white;
+    font-size: 17px;
+    height: 40px;
+    color: brown;
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+    border: 2px solid brown;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    align-content: center;
 }
 
 span{
     color: floralwhite;
     font-weight: bold;
     font-size: large;
+    display: inline;
+    float: inline-start;
+    position: relative;
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.contenedor-botones{
+    display: inline;
+    float: inline-end;
+    position: relative;
+    justify-content: center;
+    border-radius: 8px;
+    border-color: brown;
+    background-color: brown;
+    text-decoration: white;
+    font-size: 17px;
+    height: 40px;
+    color: brown;
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+    border: 2px solid brown;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .peliculas{
@@ -60,3 +124,4 @@ span{
 .aclamadas{
     display: inline;
 }
+
