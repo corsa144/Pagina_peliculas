@@ -18,7 +18,7 @@ nav{
 
 footer{
     background-color: brown;
-
+    height: 80px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     list-style-type: none;
     overflow: hidden;
@@ -26,13 +26,17 @@ footer{
     border-radius: 3px;
     align-items: center; /* Para alinear items flexibles respecto al eje secundario */
     justify-content: space-between;
+    align-content: center;
 }
 
 #seccionUno{
-    background-image: url('banner_bg.jpg');
+    background-image: url('./imgagenes/banner_bg.jpg');
     background-size: cover;
     height: 960px;
     text-align: center;
+
+    align-content: center;
+    text-decoration: white;
 }
 
 #seccionDos{
@@ -49,8 +53,29 @@ footer{
 }
 
 #tendenciasContainer{
+    align-content: center;
     align-self: auto;
 }
+
+.botonesSeccionTres{
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    border-color: brown;
+    background-color: black;
+    text-decoration: white;
+    font-size: 17px;
+    height: 40px;
+    color: brown;
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+    border: 2px solid black;
+    align-items: center; /* Para alinear items flexibles respecto al eje secundario */
+    justify-content: space-between;
+    align-content: center;
+}
+
 
 h1{
     color: floralwhite;
@@ -62,6 +87,9 @@ h2{
 
 h3{
     color: floralwhite;
+    align-items: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
 }
 
 .contenedor-botones-footer{
@@ -74,7 +102,7 @@ h3{
     background-color: brown;
     text-decoration: white;
     font-size: 17px;
-    height: 40px;
+    height: 80px;
     color: brown;
     font-weight: bold;
     font-size: larger;
