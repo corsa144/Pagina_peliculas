@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+header{
+    height: 5%;
+}
+
 nav{
     background-color: brown;
 
@@ -143,6 +147,7 @@ span{
     border: 2px solid brown;
     margin-top: 1%;
     margin-bottom: 1%;
+    margin-right: 5%;
 }
 
 .peliculas{
@@ -180,6 +185,7 @@ span{
 input[type="text"],
 input[type="password"] {
     width: 80%;
+    max-width: 400px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #cc1717;
@@ -207,4 +213,10 @@ input[type="password"] {
     margin-top: 10px;
     width: 200px;
     text-align: center;
+}
+
+#idH1Pokemon{
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }

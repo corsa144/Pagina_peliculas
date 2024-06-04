@@ -27,21 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var getPokemonButton = document.getElementById('getPokemonButton');
     if (getPokemonButton) {
-        
         getPokemonButton.addEventListener('click', function() {
-            window.location.href = 'pokemon.html';
-            fetch('https://pokeapi.co/api/v2/pokemon?limit=1')
+            fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
                 .then(response => response.json())
                 .then(data => {
-                    var pokemonContainer = document.getElementById('pokemonContainer');
-                    pokemonContainer.innerHTML = ''; // Limpiar contenido previo
-                    data.results.forEach(pokemon => {
-                        var div = document.createElement('div');
-                        div.className = 'pokemon';
-                        div.innerText = pokemon.name;
-                        pokemonContainer.appendChild(div);
-                        console.log('soy un pokemon');
-                    });
+                    localStorage.setItem('pokemonData', JSON.stringify(data.results));
+                    window.location.href = 'pokemon.html'; // Redirige a la página de lista de Pokémon
                 })
                 .catch(error => {
                     console.error('Error:', error);
