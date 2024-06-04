@@ -1,0 +1,58 @@
+// Script para index.html
+document.addEventListener('DOMContentLoaded', function() {
+    var loginButton = document.getElementById('loginButton');
+    if (loginButton) {
+        loginButton.addEventListener('click', function() {
+            window.location.href = 'login.html'; // Redirige a la página de inicio de sesión
+        });
+    }
+
+    var loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === '' || password === '') {
+                event.preventDefault(); // Previene el envío del formulario
+
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Campos vacíos',
+                    text: 'Por favor, complete todos los campos.',
+                });
+            }
+        });
+    }
+
+    var getPokemonButton = document.getElementById('getPokemonButton');
+    if (getPokemonButton) {
+        
+        getPokemonButton.addEventListener('click', function() {
+            window.location.href = 'pokemon.html';
+            fetch('https://pokeapi.co/api/v2/pokemon?limit=1')
+                .then(response => response.json())
+                .then(data => {
+                    var pokemonContainer = document.getElementById('pokemonContainer');
+                    pokemonContainer.innerHTML = ''; // Limpiar contenido previo
+                    data.results.forEach(pokemon => {
+                        var div = document.createElement('div');
+                        div.className = 'pokemon';
+                        div.innerText = pokemon.name;
+                        pokemonContainer.appendChild(div);
+                        console.log('soy un pokemon');
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Hubo un problema al obtener los datos de Pokémon.',
+                    });
+                });
+        });
+    }
+});
+
+
